@@ -1,0 +1,139 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - start
+    - /start
+    - Start
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - thanks
+    - ok
+    - k
+    - Thanks
+    - sure
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - na
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who made you
+    - who is your developer
+    - how you were developed
+
+- intent: outofscope
+  examples: |
+    - I am asking out of scope question
+    - what is 4 +3 =?
+    - tell me time
+    - what is the weather
+    - tell me a joke
+    - how to
+    - who is prime minister
+    - who will win election
+    - who is the candidate in goa
+    - goa candidate
+    - candidate of panji
+    - panji candidate
+    - who is fighting election
+    - when election started
+    - when is election
+    - election date
+
+- intent: add_data
+  examples: |
+    - i want to subscribe
+    - newsletter
+    - subscribe
+    - add me
+    - subscribe me
+    - sub
+
+- intent: choice1
+  examples: |
+    - one
+    - 1
+
+- intent: choice2
+  examples: |
+    - two
+    - 2
+
+- intent: choice3
+  examples: |
+    - three
+    - 3
+
+- intent: choice4
+  examples: |
+    - four
+    - 4
+
+- intent: choice5
+  examples: |
+    - five
+    - 5
+
+- intent: choice6
+  examples: |
+    - six
+    - 6
+
+- intent: choice7
+  examples: |
+    - seven
+    - 7
+
+
+- intent: choice8
+  examples: |
+    - 8
+    - eight

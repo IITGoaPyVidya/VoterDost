@@ -1,0 +1,64 @@
+version: "2.0"
+
+nlu:
+- intent: it_application/voter_portal_Q1
+  examples: |
+    - What services can be accessed using Voter Portal?
+    - What services voter portal provides
+    - voter portal services
+    - show me voter portal services
+    - various services of voter portal
+
+- intent: it_application/voter_helpline_app_Q2
+  examples: |
+    - Where I can get voter helpline mobile applications?
+    - Where I can get voter helpline mobile app
+    - get voter helpline mobile app
+    - voter helpline mobile app
+    - i want voter helpine app
+
+- intent: it_application/pwd_app_Q3
+  examples: |
+    - Where I can get pwd mobile applications?
+    - Where I can get pwd mobile app
+    - get pwd mobile app
+    - pwd mobile app
+    - i want pwd app
+
+- intent: it_application/cvigil_app_Q4
+  examples: |
+    - Where I can get cvigil mobile applications?
+    - Where I can get cvigil mobile app
+    - get cvigil mobile app
+    - cvigil mobile app
+    - i want cvigil app
+
+- intent: it_application/eci_website_Q5
+  examples: |
+    - Where can I access the Election Commission of India website?
+    - how to access Election Commission of India website
+    - how to access Election Commission of India website
+    - how to access eci website
+    - i want more information
+    - where to get more information
+
+- intent: it_application/rti_Q6
+  examples: |
+    - Where can I access RTI Portal?
+    - access rti portal
+    - how to access rti portal
+
+- intent: it_application/not_able_login_Q7
+  examples: |
+    - i am not able to logIn ?
+    - i am not getting otp
+    - not able to logIn
+
+- intent: it_application/contact_us_Q8
+  examples: |
+    - Where can I contact you by call ?
+    - how to contact you
+    - i want help
+    - what is helpine number
+    - tell me your help line number
+

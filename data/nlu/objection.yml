@@ -1,0 +1,48 @@
+version: "2.0"
+
+nlu:
+- intent: objection/object_to_inclusion_Q1
+  examples: |
+    - Who can object to the inclusion of names in electoral rolls?
+    - who object my inclusion of names in electoral rolls
+    - objection to inclusion of names
+
+- intent: objection/procedure_to_deletename_Q2
+  examples: |
+    - What is the procedure to delete a name from the voter list/electoral roll?
+    - procedure to delete a name from the voter list/electoral roll?
+    - procedure to delete a name
+    - delete a name from the voter list
+    - delete a name from the electoral roll
+    - form for deletion
+    - deletion form
+    - form for deletion of name
+
+- intent: objection/remove_duplicate_entries_Q3
+  examples: |
+    - How to remove duplicate Entries?
+    - i added my name twice in voter list
+    - already enrolled
+    - i am already enorolled
+    - remove duplicate Entries
+    - i enroller twice
+
+
+- intent: objection/passed_away_voters_Q4
+  examples: |
+    - One of my family members passed away recently. What is the procedure to remove their name from the voter's list?
+    - One of my family members passed away recently
+    - my family members passed away recently
+    - passed away
+    - expired
+    - dead
+    - deceased voter
+    - procedure to remove their name from the voter's list
+
+- intent: objection/objection_form_submittion_Q5
+  examples: |
+    - Who can submit the form for objection/ deletion ?
+    - submit the form for objection
+    - submit the form for deletion
+    - form for deletion
+

@@ -1,0 +1,161 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say hello anytime the user says goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: start conversation
+  steps:
+  - intent: start
+  - action: utter_start
+
+- rule: new_voter
+  steps:
+  - intent: new_voter
+  - action: utter_new_voter
+
+- rule: change_address
+  steps:
+  - intent: change_address
+  - action: utter_change_address
+
+- rule: search_my_name
+  steps:
+  - intent: search_my_name
+  - action: utter_search_my_name
+
+- rule: choice1
+  steps:
+  - intent: choice1
+  - action: utter_choice1
+  - action: utter_ask_to_type
+
+- rule: choice2
+  steps:
+  - intent: choice2
+  - action: utter_choice2
+  - action: utter_ask_to_type
+
+- rule: choice3
+  steps:
+  - intent: choice3
+  - action: utter_choice3
+  - action: utter_ask_to_type
+
+- rule: choice4
+  steps:
+  - intent: choice4
+  - action: utter_choice4
+  - action: utter_ask_to_type
+
+- rule: choice5
+  steps:
+  - intent: choice5
+  - action: utter_choice5
+  - action: utter_ask_to_type
+
+- rule: choice6
+  steps:
+  - intent: choice6
+  - action: utter_choice6
+  - action: utter_ask_to_type
+
+- rule: choice7
+  steps:
+  - intent: choice7
+  - action: utter_choice7
+  - action: utter_ask_to_type
+
+- rule: choice8
+  steps:
+  - intent: choice8
+  - action: utter_choice8
+  - action: utter_ask_to_type
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: respond to general Qn
+  steps:
+  - intent: general
+  - action: utter_general
+  - action: utter_did_that_help
+
+- rule: respond objection Qn
+  steps:
+  - intent: objection
+  - action: utter_objection
+  - action: utter_did_that_help
+
+- rule: respond related_doc
+  steps:
+  - intent: related_doc
+  - action: utter_related_doc
+  - action: utter_did_that_help
+
+- rule: respond to nri Qn
+  steps:
+  - intent: nri
+  - action: utter_nri
+  - action: utter_did_that_help
+
+- rule: respond to enroll & registered
+  steps:
+  - intent: register
+  - action: utter_register
+  - action: utter_did_that_help
+
+- rule: respond to eligibility
+  steps:
+  - intent: eligibility
+  - action: utter_eligibility
+  - action: utter_did_that_help
+
+- rule: respond to disqualified
+  steps:
+  - intent: disqualified
+  - action: utter_disqualified
+  - action: utter_did_that_help
+
+- rule: respond to correction
+  steps:
+  - intent: correction
+  - action: utter_correction
+  - action: utter_did_that_help
+
+- rule: respond to it issues
+  steps:
+  - intent: it_application
+  - action: utter_it_application
+  - action: utter_did_that_help
+
+- rule: Implementation of the Two-Stage-Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+
+- rule: out of scope
+  steps:
+  - intent: outofscope
+  - action: utter_outofscope
+
+- rule: yes
+  steps:
+  - intent: affirm
+  - action: utter_happy
+
+- rule: no
+  steps:
+  - intent: deny
+  - action: utter_sad

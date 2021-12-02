@@ -1,0 +1,74 @@
+version: "2.0"
+
+nlu:
+
+- intent: register/new_voter_Q1
+  examples: |
+    - How Can I enroll / register as a new voter and get a Voter ID Card?
+    - register as a new voter
+    - get voter id card
+    - how to get voter card
+    - apply for voter id
+    - new registration
+    - form for enrollment
+    - form for inclusion of name
+
+- intent: register/change_address_Q2
+  examples: |
+    - How to change the address from one AC to another AC?
+    - change the address from one AC to another AC?
+    - change the address
+    - i shifted to other place, i want to change the address
+    - i shifted to other place
+    - form for migration
+
+- intent: register/shiftname_to_otherdistrict_Q3
+  examples: |
+    - What is the procedure to shift my name from one district/state to another?
+    - shift my name from one district/state to another?
+    - procedure to shift my name from one district/state to another?
+    - i shifted to other district
+    - i shifted to other state
+    - Shifted outside the Assembly Constituency
+    - Shifted within Assembly Constituency
+    - form for shifting name
+    - form for shifting of name
+
+
+- intent: register/shift_out_of_AC_Q4
+  examples: |
+    - I am migrating to a new AC, am I required to delete my name from the old AC? If yes, what is the procedure?
+    - am I required to delete my name from the old AC?
+    - procedure to delete my name from the old AC?
+
+
+- intent: register/documents_for_new_registration_Q5
+  examples: |
+    - What documents are required to be uploaded for new registration?
+    - documents for new registration
+    - tell me douments required for new registration
+
+
+- intent: register/married_wife_address_Q6
+  examples: |
+    - I have recently got married. How can I get my wife enrolled at my address ?
+    - I have recently got married.
+    - How can I get my wife enrolled at my address ?
+    - change wife's address
+    - i want to change my wife's address
+
+- intent: register/voter_id_issues
+  examples: |
+    - My complete address is missing from my Voter ID even though the information submitted in the application is correct. What do I do?
+    - Application for corrections has been submitted multiple times, yet the incorrect details are entered in the revision list? What do I do?
+    - My Voter ID is not delivered to me but BLO told me that he has delivered the same. What should I do?
+    - My voter id is not delivered
+    - How to know the reason for the rejection of an application?
+    - How to contact if my name is deleted from the voters list without my knowledge?
+
+- intent: register/voter_card_samples
+  examples: |
+    - how does voter card looks like
+    - show me sample voter card
+    - how voter card look like
+    - sample voter card

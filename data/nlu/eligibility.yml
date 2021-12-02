@@ -1,0 +1,24 @@
+version: "2.0"
+
+nlu:
+- intent: eligibility/elegible_to_vote_Q1
+  examples: |
+    - Who is eligible for enrollment as a Voter?
+    - am i eligible to vote
+    - voting eligiblilty
+    - can i vote
+    - who is the voter
+    - who is eligible to vote
+    - elegible to vote
+
+- intent: eligibility/date_to_determine
+  examples: |
+    - What is the relevant date for determining the age eligibility of 18 years?
+    - relevant date for determining the age eligibility of 18 years?
+    - determining the age eligibility of 18 years?
+
+- intent: eligibility/suppose
+  examples: |
+    - Suppose I have completed 18 years of age today. Can I get myself registered as voter.?
+    - I have completed 18 years of age today. Can I get myself registered as voter.?
+    - Can I get myself registered as voter.?

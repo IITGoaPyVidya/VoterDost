@@ -1,0 +1,217 @@
+version: "2.0"
+
+nlu:
+- intent: general/check_name_electoral_roll_Q1
+  examples: |
+    - How can you check your name in the electoral roll ?
+    - How to check my name in the electoral roll ?
+    - How to check my name in the voter list ?
+    - check my name in the electoral roll ?
+    - check name in electoral roll ?
+    - check name in voter list ?
+    - i want to know is there my name in electoral roll?
+    - i want to know is there my name in voter list?
+
+- intent: general/find_status_application_enrolment_Q2
+  examples: |
+    - How can you find the status of your application for enrolment ?
+    - help me finding status of my application for enrolment?
+    - find status of my application for enrolment?
+    - what is the status of my application for enrolment
+    - status of application for enrolment
+    - help me finding status of my application?
+
+- intent: general/other_city_native_voter_Q3
+  examples: |
+    - If I am working and living in Delhi, Can I be a voter in my native village?
+    - If I am working and living in Mumbai, Can I be a voter in my native village?
+    - If I am working and living in Pune, Can I be a voter in my native village?
+    - Can I be a voter in my native village?
+
+- intent: general/forms_for_registrations_Q4
+  examples: |
+    - What are the various forms useful for registration as voter/correction/change in address etc. ?
+    - What are the various forms useful for registration as change in address etc. ?
+    - What are the various forms useful for registration as correction in address etc. ?
+    - i want to change my address, what is the process?
+    - change my address
+    - i want to change my address, what are the forms required?
+    - My Voter ID has some errors. What is the procedure to have a new Voter ID with correct particulars?
+
+- intent: general/lost_voter_card_Q5
+  examples: |
+    - I have lost my old Voter card. How can I get a new Voter ID card?
+    - please tell me process to get new voter card
+    - i have lost my old voter card
+    - i have lost my voter card
+
+
+- intent: general/competent_to_verify_Q6
+  examples: |
+    - Who is competent to verify claim applications and objections?
+    - who verify claim applications and objections?
+    - Who is competent to verify claim objections?
+
+- intent: general/electoral_roll_responsibilty_Q7
+  examples: |
+    - Who is responsible for the preparation of electoral rolls for a Parliamentary or Assembly Constituency ?
+    - Who is responsible for the preparation of electoral rolls ?
+    - Who is responsible for the preparation of electoral rolls for a Parliamentary Constituency?
+    - Who is responsible for the preparation of electoral rolls for a Assembly Constituency ?
+
+- intent: general/new_voter_cards_Q8
+  examples: |
+    - Is it true that new color Voter ID cards are being issued?
+    - what is the color of new voter id cards?
+    - are there new voter id cards?
+    - can i get new voter id cards?
+    - new voter id cards?
+
+- intent: general/office_adress_Q9
+  examples: |
+    - How to get the details office address?
+    - tell me new office address details
+    - what are details of office address?
+    - get me details of office address
+    - get the details office address
+
+- intent: general/contact_BLO_ERO_Q10
+  examples: |
+    - How can I contact my area BLO,ERO?
+    - i want to contact my area BLO
+    - i want to contact my area DEO
+    - i want to contact my area ERO
+    - i want to contact my area AERO
+    - tell me contact of BLO
+    - tell me contact of ERO
+    - tell me contact of DEO
+
+- intent: general/polling_station_details_Q11
+  examples: |
+    - How can we get details of polling stations?
+    - get details of polling stations?
+    - tell me details of polling stations?
+    - details of polling stations
+    - what is my polling address
+    - polling address
+    - get me polling address details
+    - find my polling station
+
+- intent: general/offline_applications_Q12
+  examples: |
+    - Where to get the offline applications?
+    - how can i get the offline applications?
+    - get me offline applications
+
+- intent: general/procedure_to_register_Q13
+  examples: |
+    - What is the procedure to register online?
+    - procedure to register online?
+    - tell me procedure to register online?
+    - i want to know procedure to register online?
+
+- intent: general/number_of_applications_Q14
+  examples: |
+    - How many applications can be made by one user/one login?
+    - tell me number applications can be made by one user/one login?
+    - number applications can be made by one user?
+
+- intent: general/forms_available_Q15
+  examples: |
+    - What are the forms available for making applications for new enrollment?
+    - What are the forms available for making applications for addition
+    - What are the forms available for making applications for deletion
+    - What are the forms available for making applications for corrections
+    - What are the forms available for making applications for address change
+    - form for inclusion of name
+    - form for deletion of name
+    - form for correction of entries
+    - form for shifting name
+    - i want to add my name to voter list
+    - i want to delete name from voter list
+    - i want voter id
+    - get me voter card
+    - process of getting voter card
+
+- intent: general/submit_form_to_BLO_Q16
+  examples: |
+    - Can I submit the forms to BLO?
+    - submit the forms to BLO?
+    - how can I submit the forms to BLO?
+
+- intent: general/search_my_name_Q17
+  examples: |
+    - How can I search/know whether my name is enrolled in the voter's list?
+    - How can I know whether my name is enrolled in the voter's list?
+    - whether my name is enrolled in the voter's list?
+    - tell me is there my name in voters list
+    - check my name in voter list
+    - search my name in voter list
+    - is my name enrolled in voter list
+
+- intent: general/alternate_to_voterid_Q18
+  examples: |
+    - When Voter ID is not available, what are the alternate ID proofs that can be produced to cast a vote?
+    - i lost my voter id how to vote?
+    - is there any alternative to vote rather than voter id
+    - no voter id , how to vote?
+    - alternate ID proofs that can be produced to cast a vote?
+    - alternate ID proofs to vote?
+    - alternate id proofs to vote?
+
+- intent: general/link_adhar_voterid_Q19
+  examples: |
+    - How to link Aadhaar card to Voter ID?
+    - link adhar to voter id
+    - tell me process to link Aadhaar card to Voter ID?
+    - i want to link adhar to voter
+    - process to link Aadhaar card to Voter ID?
+
+- intent: general/familymember_in_voters_list_Q20
+  examples: |
+    - How to ensure all my family members' names are together in the voters list?
+    - How to check all my family members' names are together in the voters list?
+    - all my family members' names are together in the voters list?
+    - check my family member name in voter list
+
+- intent: general/voter_at_differentplace_Q21
+  examples: |
+    - Can a person enroll as a voter at two different places?
+    - can i be voter at two different places?
+    - can i give vote at two places ?
+    - enroll as a voter at two different places?
+
+- intent: general/serial_number_details_Q22
+  examples: |
+    - I need details of my Serial Number Whom should I contact to get these details?
+    - I need details of my Part number Whom should I contact to get these details?
+    - I need details of my Assembly Constituency. Whom should I contact to get these details?
+    - need details of my Serial Number
+    - need details of my part Number
+    - need details of my Assembly Constituency
+
+
+- intent: general/proof_of_residence_ration_card_entity_Q23
+  examples: |
+    - I do not have a ration card. Can I get enrolled without a ration card?  What are the other documents which I can show as proof of my residence?
+    - What are the other documents which I can show as proof of my residence?
+    - driving license as a proof of residence
+    - driving license to get voter id
+    - telephone bill as a proof of residence
+    - telephone bill to get voter id
+    - can i submit any other proof of residence
+    - any other proof of residence
+    - proof of residence documents
+    - i do not have ration card
+    - can i get enrolled without ration card
+
+- intent: general/name_not_found_Q24
+  examples: |
+    - If the name is missing in the electoral roll what should be done?
+    - my name is missing
+    - i can't see my name in electoral roll
+    - my name is missing from voter list
+    - my name not fund
+    - name not found
+
+

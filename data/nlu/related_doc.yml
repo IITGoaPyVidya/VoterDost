@@ -1,0 +1,47 @@
+version: "2.0"
+
+nlu:
+- intent: related_doc/proof_of_residence_Q1
+  examples: |
+    - What proof of residence do I need to submit to get enrolled as a voter?
+    - what are the documents required to get voter card
+    - i want to get voter card what are the required documents
+    - please tell me documents required to get voter card
+    - proof of residence do I need to submit to get enrolled as a voter
+    - proof of residence documents
+
+
+- intent: related_doc/DOB_docs_Q2
+  examples: |
+    - What are the documents that can be considered as the date of birth proof?
+    - documents that can be considered as the date of birth proof?
+    - documents required for DOB prrof
+    - date of birth document
+    - dob documents
+    - dob doc
+
+- intent: related_doc/age_21_more_Q3
+  examples: |
+    - Is a documentary proof of age required in cases where the age of the applicant is more than 21 years?
+    - i am 22 years old, are the documents required?
+    - i am 23 years old, are the documents required?
+
+- intent: related_doc/18_21_no_doc_Q4
+  examples: |
+    - An applicant who is of 18-21 years of age doesn’t have any documentary proof of age/date of birth. What paper is he required to attach with his application form for registration as an elector?
+    - An applicant who is of 18-21 years of age doesn’t have any documentary proof of age
+    - doesn’t have any documentary proof of age
+    - doesn’t have any proof of age document
+
+- intent: related_doc/all_forms
+  examples: |
+    - form 6
+    - form 6a
+    - form 7
+    - form 8a
+    - form 8
+    - show me form 6
+    - how to get form 6
+    - how to get form 8
+
+

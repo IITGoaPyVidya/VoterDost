@@ -1,0 +1,29 @@
+version: "2.0"
+
+nlu:
+- intent: disqualified/not_eligibile_Q1
+  examples: |
+    - Who is not eligible to be a Voter?
+    - not eligible to vote
+    - not eligible for voting
+
+- intent: disqualified/not_indian_citizen_Q2
+  examples: |
+    - If a person is not an Indian citizen is he eligible to be an Indian voter?
+    - i am not indian citizen , can i vote
+    - i am not indian citizen
+    - not indian citizen
+
+- intent: disqualified/non_resident_indian_Q3
+  examples: |
+    - Can a non-resident Indian Citizen become a voter?
+    - Can a non-resident Indian Citizen vote?
+    - i am non-resident indian citizen cam i vote?
+    - i am non-resident indian citizen
+    - non-resident indian citizen
+
+- intent: disqualified/more_enrolled_Q4
+  examples: |
+    - Can one be enrolled at more than one place?
+    - enrolled at more than one place?
+    - more than one place enrolled

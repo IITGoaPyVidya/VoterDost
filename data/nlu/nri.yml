@@ -1,0 +1,37 @@
+version: "2.0"
+
+nlu:
+- intent: nri/nri_elector_Q1
+  examples: |
+    - Who is an overseas (NRI) elector? Can an NRI settled in foreign land become an elector of electoral roll in India?
+    - Can an NRI settled in foreign land become an elector of electoral roll in India?
+    - Who is an overseas (NRI) elector?
+    - can nri become an elector
+
+- intent: nri/passport_mandate_Q2
+  examples: |
+    - Why is the passport mandatory for overseas voters?
+    - is the passport mandatory for overseas voters?
+    - passport mandatory
+    - why passport mandatory
+
+
+- intent: nri/nri_epic_Q3
+  examples: |
+    - Is an overseas (NRI) elector issued an EPIC?
+    - nri issues an epic
+
+- intent: nri/nri_docs_Q4
+  examples: |
+    - What documents are required to be enclosed for overseas voters ?
+    - documents required for nri voter
+    - nri documents
+    - documents to nri
+
+- intent: nri/nri_registration_Q5
+  examples: |
+    - How Can I enroll/register as an overseas voter and get a Voter ID Card?
+    - nri registration
+    - overseas registration
+    - register nri
+    - register overseas

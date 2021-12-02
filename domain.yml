@@ -1,0 +1,829 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- outofscope
+- stop
+- related_doc:
+    is_retrieval_intent: true
+- eligibility:
+    is_retrieval_intent: true
+- it_application:
+    is_retrieval_intent: true
+- objection:
+    is_retrieval_intent: true
+- nri:
+    is_retrieval_intent: true
+- register:
+    is_retrieval_intent: true
+- general:
+    is_retrieval_intent: true
+- correction:
+    is_retrieval_intent: true
+- disqualified:
+    is_retrieval_intent: true
+- greet
+- goodbye
+- affirm
+- deny
+- start
+- bot_challenge
+- new_voter
+- change_address
+- search_my_name
+- choice1
+- choice2
+- choice3
+- choice4
+- choice5
+- choice6
+- choice7
+- choice8
+
+
+responses:
+  utter_start:
+    - text: Hi, I am VoterDost, I will try to help you solving queries related to elections.
+        How can I help you?
+      button_type: vertical
+      buttons:
+        - title: Form for new enrolment
+          payload: /new_voter
+        - title: Form for correction in name,age,DOB
+          payload: correct_details_voterid_Q2
+        - title: Form for Change in address
+          payload: /change_address
+        - title: Form for deletion of name
+          payload: procedure_to_deletename_Q2
+        - title: NRI Registration
+          payload: nri_registration_Q5
+        - title: Know your polling station
+          payload: polling_station_details_Q11
+        - title: Know your electoral details (search name)
+          payload: /search_my_name
+  utter_greet:
+  - text: Hi, I am VoterDost, I will try to help you solving queries related to elections.
+          How can I help you?
+    button_type: vertical
+    buttons:
+    - title: Form for new enrolment
+      payload: /new_voter
+    - title: Form for correction in name,age,DOB
+      payload: correct_details_voterid_Q2
+    - title: Form for Change in address
+      payload: /change_address
+    - title: Form for deletion of name
+      payload: procedure_to_deletename_Q2
+    - title: NRI Registration
+      payload: nri_registration_Q5
+    - title: Know your polling station
+      payload: polling_station_details_Q11
+    - title: Know your electoral details (search name)
+      payload: /search_my_name
+  utter_ask_name:
+    - text: "May I Know your name please"
+  utter_ask_number:
+    - text: "May I Know your mobile number please"
+  utter_ask_email:
+    - text: "May I Know your email id please"
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: |-
+      Did that help you?
+      type yes/no
+
+  utter_happy:
+  - text: Great, carry on!
+  utter_sad:
+  - text: |-
+      I am extremely sorry!
+      please click on any relevant button
+      or
+      Please Visit https://eci.gov.in/
+      or
+      You can call at Voter Helpline number 1950
+    button_type: vertical
+    buttons:
+    - title: Correction of Entries
+      payload: /choice1
+    - title: DisQualified Request
+      payload: /choice2
+    - title: Eligibility Criteria
+      payload: /choice3
+    - title: Enrolled / Registered?
+      payload: /choice4
+    - title: General Category
+      payload: /choice5
+    - title: Objection/ Deletion
+      payload: /choice6
+    - title: NRI Registration
+      payload: /choice7
+    - title: Required Documents
+      payload: /choice8
+    - title: Form for new enrolment
+      payload: /new_voter
+    - title: Form for correction in name,age,DOB
+      payload: correct_details_voterid_Q2
+    - title: Form for Change in address
+      payload: /change_address
+    - title: Form for deletion of name
+      payload: procedure_to_deletename_Q2
+    - title: NRI Registration
+      payload: nri_registration_Q5
+    - title: Know your polling station
+      payload: polling_station_details_Q11
+    - title: Know your electoral details (search name)
+      payload: /search_my_name
+  utter_goodbye:
+  - text: ok
+  utter_outofscope:
+  - text: Sorry Sir/Madam, I am not trained on this.
+  utter_iamabot:
+  - text: I am a bot, powered by IIT Goa.
+  utter_default:
+  - text: |-
+      I am trained on following categories
+      please click on any relevant button,
+      or
+      Please Visit https://eci.gov.in/
+      or
+      You can call at Voter Helpline number 1950
+    button_type: vertical
+    buttons:
+    - title: Correction of Entries
+      payload: /choice1
+    - title: DisQualified Request
+      payload: /choice2
+    - title: Eligibility Criteria
+      payload: /choice3
+    - title: Enrolled / Registered?
+      payload: /choice4
+    - title: General Category
+      payload: /choice5
+    - title: Objection/ Deletion
+      payload: /choice6
+    - title: NRI Registration
+      payload: /choice7
+    - title: Required Documents
+      payload: /choice8
+    - title: Form for new enrolment
+      payload: /new_voter
+    - title: Form for correction in name,age,DOB
+      payload: correct_details_voterid_Q2
+    - title: Form for Change in address
+      payload: /change_address
+    - title: Form for deletion of name
+      payload: procedure_to_deletename_Q2
+    - title: NRI Registration
+      payload: nri_registration_Q5
+    - title: Know your polling station
+      payload: polling_station_details_Q11
+    - title: Know your electoral details (search name)
+      payload: /search_my_name
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_ask_affirmation:
+  - text: Did you mean ?
+  utter_ask_to_type:
+  - text: |-
+        if your question is in the above list, please type
+        otherwise you can call at Voter Helpline number 1950
+  utter_new_voter:
+  - text: |-
+      To apply for voter ID card kindly follow the below steps:
+      Step 1: Log on to our voter portal https://voterportal.eci.gov.in .
+      Step 2: Register by entering a email ID
+      Step 3: Verify your email id by received mail.
+      Step 4: Create password for your account.
+      Step 5: You need to answer whether you already have a Voter ID or not.
+      Step 6: Upload one passport size colour photo in the space mentioned.
+      Step 7: Select your age or date of birth and upload the proof of age.
+      Step 8: Enter your full name, gender and disability if any(optional).
+      Step 9: Enter your family member name and select relationship type.
+      Step 10: Enter your address details and upload the proof of residence.
+      Step 11: Read declaration and accept.
+      Step 12: Check & preview the filled information.
+      Step 13: Get the reference number for the submitted application.
+  utter_change_address:
+  - text: |-
+      Register yourself on Voter Portal (https://voterportal.eci.gov.in) using email ID and need to follow below steps to change the address from one AC to another:
+      Step 1: User needs to select form “Shifted to other Place”
+      Step 2: User needs to provide the voter id card number
+      Step 3: User will verify the fetched details
+      Step 4: Select the option shifted outside the AC.
+      Step 5: User will fill New Address, Upload an image, and upload the relevant documents.
+      Step 6: At the last user will verify the filled details and submit the form.
+      Step 7: Reference ID will get generated for status tracking.
+  utter_search_my_name:
+  - text: |-
+      kindly log in to the Voter Portal and click on the "Search in Electoral Roll". Here you can search the name in an electoral roll using voter ID number or details of the voter. Or the user can also search their name in Voter Helpline application by Voter ID number or name.
+      click on this link to search in Electoral Roll : https://electoralsearch.in/
+  utter_choice1:
+  - text: |-
+        How many entries can be corrected in a single form?
+        ------------------------------------
+        How to correct my details on the voter card?
+        ------------------------------------
+        How to change Date Of Birth?
+        ------------------------------------
+        How to correct my name?
+        ------------------------------------
+        How to change the relative name?
+        ------------------------------------
+        All the details are correct in my voter ID except pin code and area name in the revised list? What do I do?
+
+  utter_choice2:
+  - text: |-
+        Who is not eligible to be a Voter?
+        ------------------------------------
+        If a person is not an Indian citizen is he eligible to be an Indian voter?
+        ------------------------------------
+        Can a non-resident Indian Citizen become a voter?
+        ------------------------------------
+        Can one be enrolled at more than one place?
+
+  utter_choice3:
+  - text: |-
+        Who is eligible for enrollment as a Voter?
+        What is the relevant date for determining the age eligibility of 18 years?
+        Suppose I have completed 18 years of age today. Can I get myself registered as voter.?
+
+  utter_choice4:
+  - text: |-
+        How Can I enroll / register as a new voter and get a Voter ID Card?
+        ------------------------------------
+        How to change the address from one AC to another AC?
+        ------------------------------------
+        What is the procedure to shift my name from one district/state to another?
+        ------------------------------------
+        I am migrating to a new AC, am I required to delete my name from the old AC? If yes, what is the procedure?
+        What documents are required to be uploaded for new registration?
+        ------------------------------------
+        I have shifted my residence recently. How Can I get a new EPIC Card for the present address?
+        ------------------------------------
+        I have recently got married. How can I get my wife enrolled at my address ?
+
+  utter_choice5:
+  - text: |-
+        How can you check your name in the electoral roll ?
+        How can you find the status of your application for enrolment ?
+        If I am working and living in Delhi, Can I be a voter in my native village?
+        What are the various forms useful for registration as voter/correction/change in address etc. ?
+        I have lost my old Voter card. How can I get a new Voter ID card?
+        ------------------------------------
+        Who is competent to verify claim applications and objections?
+        Who is responsible for the preparation of electoral rolls for a Parliamentary or Assembly Constituency ?
+        Is it true that new color Voter ID cards are being issued?
+        How to get the details office address?
+        How can I contact my area BLO,ERO?
+        How can we get details of polling stations?
+        ------------------------------------
+        How to check my name in the voter list/electoral roll/election list?
+        Where to get the offline applications?
+        What is the procedure to register online?
+        How many applications can be made by one user/one login?
+        What are the forms available for making applications for new enrollment/addition/deletion/corrections and address change?
+        Can I submit the forms to BLO?
+        ------------------------------------
+        How can I search/know whether my name is enrolled in the voter's list?
+        When Voter ID is not available, what are the alternate ID proofs that can be produced to cast a vote?
+        How to link Aadhaar card to Voter ID?
+        How to ensure all my family members' names are together in the voters list?
+        Can a person enroll as a voter at two different places?
+        How can we get details of polling stations?
+        ------------------------------------
+        I need details of my Serial Number, Part number, Polling Station, and Assembly Constituency. Whom should I contact to get these details?
+        I do not have a ration card. Can I get enrolled without a ration card?  What are the other documents which I can show as proof of my residence?
+
+  utter_choice6:
+  - text: |-
+        Who can object to the inclusion of names in electoral rolls?
+        What is the procedure to delete a name from the voter list/electoral roll?
+        How to remove duplicate Entries?
+        One of my family members passed away recently. What is the procedure to remove their name from the voter's list?
+        Who can submit the form for objection/ deletion ?
+
+  utter_choice7:
+  - text: |-
+        Who is an overseas (NRI) elector? Can an NRI settled in foreign land become an elector of electoral roll in India?
+        Why is the passport mandatory for overseas voters?
+        Is an overseas (NRI) elector issued an EPIC?
+        What documents are required to be enclosed for overseas voters ?
+        How Can I enroll/register as an overseas voter and get a Voter ID Card?
+
+  utter_choice8:
+  - text: |-
+        What proof of residence do I need to submit to get enrolled as a voter?
+        ------------------------------------
+        What are the documents that can be considered as the date of birth proof?
+        Is a documentary proof of age required in cases where the age of the applicant is more than 21 years?
+        ------------------------------------
+        An applicant who is of 18-21 years of age doesn’t have any documentary proof of age/date of birth. What paper is he required to attach with his application form for registration as an elector?
+
+  utter_correction/entry_correction_number_Q1:
+  - text: |-
+      You are allowed to make requests for the correction of a maximum of three entries at a time. The correction form has a condition after the selection of the first entry, the other two entries will be displayed that can be selected on the basis of the first entry. You have to follow available conditions
+
+      1. You are not allowed to choose corrections for 'name' and 'address' together.
+      2. You are not allowed to choose corrections for 'relative name' and 'address' together.
+  utter_correction/correct_details_voterid_Q2:
+  - text: |-
+      Register yourself on Voter Portal (https://voterportal.eci.gov.in) using email ID and follow the below steps to apply the correction form:
+
+      1.  Select the option “Correction in Voter ID”
+      2.  Select the entity for which you like to fill the form
+      3.  Provide the relevant documents and details accordingly
+      4.  Fill declaration
+      5.  Preview and submit the application.
+      6.  Reference ID will get generated for status tracking
+  utter_correction/change_DOB_Q3:
+  - text: |-
+      Register yourself on Voter Portal (https://voterportal.eci.gov.in) using email ID and follow the below steps to change your date of birth:
+
+      1. Select the option “Correction in Voter ID”
+      2. Select the correction in Age
+      3. Provide the relevant documents
+      4. Fill declaration
+      5. Preview and submit the application.
+      6. Reference ID will get generated for status tracking
+  utter_correction/change_name_Q4:
+  - text: |-
+      Register yourself on Voter Portal (https://voterportal.eci.gov.in) using email ID and follow the below steps to correct your name:
+
+      1. Select the option “Correction in Voter ID”
+      2. Select the correction in Name
+      3. Provide the relevant documents
+      4. Fill declaration
+      5. Preview and submit the application.
+      6. Reference ID will get generated for status tracking
+  utter_correction/change_relative_name_Q5:
+  - text: |-
+      Register yourself on Voter Portal (https://voterportal.eci.gov.in) using email ID and follow the below steps to correct your relative name:
+
+      1. Select the option “Correction in Voter ID”
+      2. Select the correction in Name of Relative.
+      3. Provide the relevant documents accordingly
+      4. Fill declaration
+      5. Preview and submit the application.
+      6. Reference ID will get generated for status tracking
+  utter_correction/change_pin_Q6:
+  - text: |-
+      Register yourself on Voter Portal (https://voterportal.eci.gov.in) using email ID and follow the below steps to change in address:
+
+      1. Select the option “Correction in Voter ID”
+      2. Select the correction in Address
+      3. Provide relevant documents accordingly.
+      4. Fill declaration
+      5. Preview and submit the application.
+      6. Reference ID will get generated for status tracking
+  utter_disqualified/not_eligibile_Q1:
+  - text: |-
+      A person will be disqualified for registration in an electoral roll:
+      1. If he is not a citizen of India; or
+      2. If he is of unsound mind and stands so declared by a competent court; or
+      3. If he is for the time being disqualified from voting under the provisions of any law relating to corrupt practices and other offenses in connection with the election
+      OR
+
+      The name of any person who becomes so disqualified after registration shall forthwith be struck off the electoral roll in which it is included. Provided that the name of any person struck off the electoral roll of a constituency by reason of disqualification under clause (c) of sub-section (1) shall forthwith be reinstated in that roll it such disqualification is during the period such roll is in force, removed under any law authorizing such removal.
+  utter_disqualified/not_indian_citizen_Q2:
+  - text: No, a person can not be an Indian voter who is not the citizen of India as per article 326 of the constitution with section 16 of the R. P. Act, 1950
+  utter_disqualified/non_resident_indian_Q3:
+  - text: Yes, according to the provisions of the Representation of the People (Amendment) Act, 2010, who is a citizen of India and who has no longer received the citizenship of any other country. Those people are eligible to be registered as a voter, who's absent from his regular house in India because of his employment, education, or in any other case.
+  utter_disqualified/more_enrolled_Q4:
+  - text: No, a person can not be enrolled as a voter in more than one place in the identical constituency or in multiple constituencies in view of the provisions contained underneath Sec. 17 and 18 of R. P. Act, 1950.
+  utter_eligibility/elegible_to_vote_Q1:
+  - text: |-
+      (a) Each Citizen who is 18 years of age on the qualifying date which is first January of the concerned year, except if excluded is qualified to be enrolled.
+      (b) Enrollment only at an ordinary place of residence.
+      (c) The name should not be present in the electoral roll anywhere.
+      (d) An Overseas Indian who has been at the passport address as an ordinary resident.
+      (e) Service Voters deemed to be ordinarily resident at their home address.
+  utter_eligibility/date_to_determine:
+  - text: 1st January of the applying year will be the determining date for the eligibility of 18 years. This same date is considered for the revision of the electoral roll as per Section 14 (b) of the R. P. Act, 1950.
+  utter_eligibility/suppose:
+  - text: It depends on your date of birth. An applicant age is considered as eligible to apply for voter ID if only he/she became 18 years old on the 1st January of the applying year. As the electoral roll gets revised on the 1st January of every year.
+  utter_register/new_voter_Q1:
+  - text: |-
+      To apply for voter ID card kindly follow the below steps:
+      Step 1: Log on to our voter portal https://voterportal.eci.gov.in .
+      Step 2: Register by entering a email ID
+      Step 3: Verify your email id by received mail.
+      Step 4: Create password for your account.
+      Step 5: You need to answer whether you already have a Voter ID or not.
+      Step 6: Upload one passport size colour photo in the space mentioned.
+      Step 7: Select your age or date of birth and upload the proof of age.
+      Step 8: Enter your full name, gender and disability if any(optional).
+      Step 9: Enter your family member name and select relationship type.
+      Step 10: Enter your address details and upload the proof of residence.
+      Step 11: Read declaration and accept.
+      Step 12: Check & preview the filled information.
+      Step 13: Get the reference number for the submitted application.
+  utter_register/change_address_Q2:
+  - text: |-
+      Register yourself on Voter Portal (https://voterportal.eci.gov.in) using email ID and need to follow below steps to change the address from one AC to another:
+      Step 1: User needs to select form “Shifted to other Place”
+      Step 2: User needs to provide the voter id card number
+      Step 3: User will verify the fetched details
+      Step 4: Select the option shifted outside the AC.
+      Step 5: User will fill New Address, Upload an image, and upload the relevant documents.
+      Step 6: At the last user will verify the filled details and submit the form.
+      Step 7: Reference ID will get generated for status tracking.
+  utter_register/shiftname_to_otherdistrict_Q3:
+  - text: |-
+      Register yourself on Voter’s Portal (https://voterportal.eci.gov.in) using email ID and need to follow the below steps:
+            Step 1: User needs to select form “Shifted to other Place”
+            Step 2: User needs to provide the voter id card number
+            Step 3: User will verify the fetched details
+            Step 4: Select the option accordingly from two i.e., “Shifted outside the Assembly Constituency” & “Shifted within Assembly Constituency”.
+            Step 5: User will fill New Address, Upload an image, and upload the relevant documents.
+            Step 6: At the last user will verify the filled details and submit the form.
+            Step 7: Reference ID will get generated for status tracking.
+  utter_register/shift_out_of_AC_Q4:
+  - text: |-
+      Yes it is mandatory to request for deletion of your name. But in case of migration to a new AC you need to apply an application of "Shifted out of AC." This form will delete your name from the previous electoral roll and make a fresh enrollment in your current assembly. To apply the form for migration out of AC user needs to follow the below steps:
+
+      1. User register himself/herself on Voter Portal using email id and log in yo apply the request.
+      2. Select the option “Shifted to other Place"
+      3. Enter your Voter ID number or details to search your name from the electoral roll.
+      4. Select "Shifted outside the assembly constituency"
+      5. Provide your new address details with relevant documents.
+      6. Upload your photograph and select from the disability option if any.
+      7. Fill the declaration
+      8. Preview the form and submit the application
+      9. Reference ID will get generated for status tracking
+  utter_register/documents_for_new_registration_Q5:
+  - text: One recent passport size coloured photograph, and scanned copies of documentary proof of age and residence are required to be uploaded .
+  utter_register/married_wife_address_Q6:
+  - text: |-
+      This will depend on the following:\n
+          1. If your wife is a voter for the first time then she will have to fill in a form for enrolment as a new voter.
+          2. In case your wife is already a voter then she needs to fill the form for migration depending upon the change in Assembly Constituency.
+      which form details you want?
+    buttons:
+    - title: Form for enrolment
+      payload: /new_voter
+    - title: Form for migration
+      payload: /change_address
+  utter_register/voter_id_issues:
+  - text: Applicant may visit Voter Portal (https://voterportal.eci.gov.in) and check the tracking status of the application on the profile page or select a relevant category to file a complaint along with required document proof or dial the number 1950 to reach us.
+
+  utter_register/voter_card_samples:
+  - text: 'Here is sample voter card:'
+    image: https://www.oneindia.com/img/2018/10/voter-id-1539597279.jpg
+  utter_general/check_name_electoral_roll_Q1:
+  - text: |-
+      Please visit our Voter Portal (https://voterportal.eci.gov.in) or
+      install a voter helpline mobile application in your mobile phone to check the name in the electoral roll.
+      .
+      Please follow the below steps to check your name in the electoral roll
+
+      1. Register by entering an email ID
+      2. Verify your email id by received mail.
+      3. Create a password for your account.
+      4. Click on Electoral Search at Homepage
+      5. Provide Voter ID number or details to search the name.
+  utter_general/find_status_application_enrolment_Q2:
+  - text: |-
+      You can check application status by login into the Voter portal (https://voterportal.eci.gov.in )
+      and click on ‘Track Application’.
+
+      Applicant may visit Voter Portal (https://voterportal.eci.gov.in ) and You can check application status by login Voter portal or Go to the homepage of the website of the respective state CEOs and click on the tab "Know the Status of Your application for the current status of the application at the profile page or select a relevant category to file a complaint along with required document proof or dial the number 1950 to reach us.
+  utter_general/other_city_native_voter_Q3:
+  - text: |-
+      Yes, you can be a voter of your native place;
+      the condition is only that you should not be enrolled somewhere else in the electoral roll.
+  utter_general/forms_for_registrations_Q4:
+  - text: |-
+      You can use the following application form using voter portal:
+      (a) Shifting Residence : You can apply for inclusion of your name in the electoral roll at a new address due to shifting.
+      (b) For Correction of Entries: You can apply for correction of particulars, if you are need to change anyone of the following:
+       ->
+       1. Name
+       2. Photograph
+       3. EPIC
+       4. Address
+       5. Date of Birth
+       6. Age
+       7. Name of relative
+       8. Type of relation
+       9. Gender
+       ->
+      (c) For Objection/ Deletion: You can apply for inclusion of another person whose entry is objected or your own name deleted from the electoral roll.
+      (d) For Overseas Voter Registration: You can apply for inclusion of your name in the electoral roll if you are residing out of the country and don't have the citizenship of another country and you are a resident of India.
+    button_type: vertical
+    buttons:
+    - title: Form for new enrolment
+      payload: new_voter
+    - title: Form for correction in name,age,DOB
+      payload: correct_details_voterid_Q2
+
+    - title: Form for Change in address
+      payload: change_address
+    - title: Form for deletion of name
+      payload: procedure_to_deletename_Q2
+
+    - title: NRI Registration
+      payload: nri_registration_Q5
+  utter_general/lost_voter_card_Q5:
+  - text: |-
+      You can apply to issue a duplicate EPIC card by registering to voter portal. The user needs to follow the below steps for the duplicate voter id.
+      ->
+      1. Register by entering an email ID
+      2. Verify your email id by received mail.
+      3. Create a password for your account.
+      4. At dashboard select select " Replacement of Voter ID "
+      5. The user will search and verify the details using the Voter ID number or by details.
+      6. Provide reason for the replacement of the voter id card.
+      7. Choose the option to collect voter ID from three available options.
+      8. Choose the mode of payment
+      9. Preview the form & Submit
+      10.Reference ID gets generated for tracking the status.
+  utter_general/competent_to_verify_Q6:
+  - text: The Electoral Registration Officer/Assistant Electoral Registration Officer of the concerned constituency.
+  utter_general/electoral_roll_responsibilty_Q7:
+  - text: |-
+      If you have any grievance in regard to the electoral roll, Electors Photo Identity Card or any other election related matter you may approach following Officers:-
+
+      1. Chief Electoral Officer: At the State Level
+      2. District Election Officer: At the District Level
+      3. Returning Officer: At the Constituency Level
+      4. Assistant Returning Officer: At Taluka/Tehsil Level
+      5. Electoral Registration Officer: At the Constituency Level
+      6. Presiding Officer: At Polling Station
+      7. Zonal Officer: For a group of Polling stations
+
+      Detailed addresses are available on the websites of the CEOs of respective States/ UTs.
+  utter_general/new_voter_cards_Q8:
+  - text: Yes. The new EPIC will be a PVC color card.
+  utter_general/office_adress_Q9:
+  - text: Please visit our Voter Portal (https://voterportal.eci.gov.in) and You can get office address details from your profile page. You can check the concerned CEO state website also for office details.
+  utter_general/contact_BLO_ERO_Q10:
+  - text: Contact details of DEO, ERO, AERO, BLO are available at Voter Portal https://voterportal.eci.gov.in on profile page.
+  utter_general/polling_station_details_Q11:
+  - text: |-
+      Please visit our Voter Portal (https://voterportal.eci.gov.in) and after login, access your profile page to get the polling station details or install voter helpline mobile application in your mobile phone to get polling station details.
+      click on this link to know your polling station : https://electoralsearch.in//
+  utter_general/offline_applications_Q12:
+  - text: The forms can be downloaded from the Voter Portal (https://voterportal.eci.gov.in). You can also visit the offices of the concerned ERO/AERO.
+  utter_general/procedure_to_register_Q13:
+  - text: |-
+      Please visit Voter Portal (https://voterportal.eci.gov.in) or install voter helpline mobile application and provide the required information for registration.
+       You can register yourself by visiting the Voter Portal by following the below steps:
+           Step 1: Log on to Voter Portal https://voterportal.eci.gov.in.
+           Step 2: Register by entering an email ID
+           Step 3: Verify your email id by received mail.
+           Step 4: Create a password for your account.
+           Step 5: You need to answer whether you already have a Voter ID or not.
+           Step 6: Upload one passport size color photo in the space mentioned.
+           Step 7: Select your age or date of birth and upload the proof of age.
+           Step 8: Enter your full name, gender, and disability if any(optional).
+           Step 9: Enter your family member's name and select a relationship type.
+           Step 10: Enter your address details and upload the proof of residence.
+           Step 11: Read the declaration.
+           Step 12: Submit the form.
+           Step 13: Get the reference number for the submitted application.
+  utter_general/number_of_applications_Q14:
+  - text: Multiple applications can be made through a single account for self and family members. But only one at a time i.e., the next form will be allowed only once the previous gets approved.
+  utter_general/forms_available_Q15:
+  - text: 'Applications can be made through the following forms: Form for the inclusion of name (New Voter Registration), Form for deletion of the name(Deletion for Voter ID), Form for correction of entries (Correction in Voter ID) and Form for shifting of name within the same constituency (Shifted to other places).'
+    button_type: vertical
+    buttons:
+    - title: Form for new enrolment
+      payload: /new_voter
+    - title: Form for correction in name,age,DOB
+      payload: correct_details_voterid_Q2
+    - title: Form for Change in address
+      payload: /change_address
+    - title: Form for deletion of name
+      payload: procedure_to_deletename_Q2
+    - title: NRI Registration
+      payload: nri_registration_Q5
+  utter_general/submit_form_to_BLO_Q16:
+  - text: Yes, You can directly submit a manual application to BLO or AERO or ERO.
+  utter_general/search_my_name_Q17:
+  - text: |-
+      kindly log in to the Voter Portal and click on the "Search in Electoral Roll". Here you can search the name in an electoral roll using voter ID number or details of the voter. Or the user can also search their name in Voter Helpline application by Voter ID number or name.
+      click on this link to search in Electoral Roll : https://electoralsearch.in/
+  utter_general/alternate_to_voterid_Q18:
+  - text: |-
+      Other ID proof documents issued by Government authorities are acceptable. The list of approved government ID proof documents can submit any proof as listed below:
+
+            1. Aadhaar Card
+            2. PAN Card
+            3. Birth certificate
+            4. Driving License
+            5. Indian Passport
+            6. Marksheet of Class X/Class VIII/Class V,  if it contains Date of Birth
+            7. Birth Certificate from the school/other educational institution (Govt./Recognized), last attended
+            8. Birth Certificate issued by a Municipal Authorities
+            9. Registrar of Births & Deaths
+            10.Baptism certificate
+  utter_general/link_adhar_voterid_Q19:
+  - text: At present there is no provision for linking the two cards. However you can submit an Aadhar Card as a document for proof of name and age only
+  utter_general/familymember_in_voters_list_Q20:
+  - text: Family members can be tagged together as a group by visiting Voter Portal (URL) or install voter helpline mobile application in your mobile phone.
+  utter_general/voter_at_differentplace_Q21:
+  - text: A person cannot be enrolled as a voter at more than one place in the identical constituency or in multiple constituencies in view of the provisions contained underneath Sec. 17 and 18 of R. P. Act, 1950
+  utter_general/serial_number_details_Q22:
+  - text: Please visit Voter Portal (https://voterportal.eci.gov.in ) or install a voter helpline mobile application in your mobile phone or contact the 1950 Voter helpline.
+  utter_general/proof_of_residence_ration_card_entity_Q23:
+  - text: |-
+      If an applicant does not have a ration card, he can submit any other proof of residence, listed in the guidelines enclosed with Form 6 such as:
+
+      Bank/Kisan/Post Office current Passbook
+      Driving License
+      Indian Passport
+      Income Tax Return filed/Assessment Order
+      Latest Rental Agreement
+      Latest Water/Telephone/Electricity/Gas Connection Bill
+      Postal department's posts received/delivered in the applicant's name at the given address
+      Homeless /Others
+  utter_general/name_not_found_Q24:
+  - text: |-
+      Please visit Voter Portal (https://voterportal.eci.gov.in) and verify the status of the voter ID. You can file a complaint in the relevant category.
+
+  utter_objection/object_to_inclusion_Q1:
+  - text: Any person who is a voter in the concerned constituency may object to the inclusion of names in electoral roll on the ground that the person whose name is included or is proposed to be included is not eligible to be registered as a voter in that constituency.
+  utter_objection/procedure_to_deletename_Q2:
+  - text: |-
+      User will follow the below steps on Voter Portal to delete the name from the electoral roll:
+
+      1. Register by entering an email ID
+      2. Verify your email id by received mail.
+      3. Create a password for your account.
+      4. Select Deletion of Voter ID
+      5. Select “Objecting Inclusion of Name of Other Person”
+      6. Enter the details of the voter id number or the details of the person whose name inclusion you are objecting to. Also, provide the reason and description for objection.
+      7. Read the declaration and accept it.
+      8. Check & preview the filled information.
+      9. Get the reference number for the submitted application.
+  utter_objection/remove_duplicate_entries_Q3:
+  - text: |-
+      User will follow the following steps on Voter Portal to remove the name from the electoral roll due to death:
+
+      1. Register here by entering an email ID
+      2. Verify your email id by received mail.
+      3. Create a password for your account.
+      4. Select Deletion of Voter ID
+      5. Select “Other’s person name in electoral roll due to death”
+      6. Provide Voter ID number or details of the person for whom you are requesting.
+      7. Read the declaration and accept it.
+      8. Check & preview the filled information.
+      9. Get the reference number for the submitted application.
+  utter_nri/nri_elector_Q1:
+  - text: An overseas elector is a person who is a citizen of India, and who has not acquired citizenship of any other country, and is otherwise eligible to be registered as a voter and who is absenting from his place of ordinary residence in India owing to his employment, education or otherwise is eligible to be registered as a voter in the constituency in which his place of residence in India as mentioned in his passport is located.
+  utter_nri/passport_mandate_Q2:
+  - text: ‘Passport’ means a passport issued by the Indian Government, in which visa endorsement has been made. It doesn’t necessarily mean the current passport, since in many cases the current passport may not contain details of the address in India, mentioned in the original passport but may contain the address in foreign land.
+  utter_nri/nri_epic_Q3:
+  - text: An overseas (NRI) elector is not issued an EPIC as he is allowed to cast his vote in an election in the constituency, in person at the polling station on production of his original passport.
+  utter_nri/nri_docs_Q4:
+  - text: One recent passport size colored photograph, scanned copies of the relevant pages of the passport containing photographs, his address in India, and all other particulars of the applicant and also the page of passport containing the valid visa endorsement.
+  utter_nri/nri_registration_Q5:
+  - text: |-
+      An overseas citizen can apply for the voter id by registering himself/herself on the voter portal.
+
+      1. Log on to Voter Portal https://voterportal.eci.gov.in.
+      2. Register by entering an email ID
+      3. Verify your email id by received mail.
+      4. Create a password for your account.
+      5. You need to answer whether you already have a Voter ID or not.
+      6. Upload one passport size color photo in the space mentioned.
+      7. Select your age or date of birth and upload the proof of age.
+      8. Enter your full name, gender, and disability if any(optional).
+      9. Enter your family member's name and select a relationship type.
+      10. Enter your address details and upload the proof of residence.
+      11. Enter passport details and copy of passport.
+      12. Enter details of visa and copy of the visa.
+      13. Enter the current address of the country where you are residing.
+      14. Read the declaration and accept it.
+      15. Check & preview the filled information.
+      16. Get the reference number for the submitted application.
+  utter_related_doc/proof_of_residence_Q1:
+  - text: |-
+      You can submit any proof of residence as listed below
+
+      Bank/Kisan/Post Office current Passbook
+      Ration Card
+      Driving License
+      Indian Passport
+      Income Tax Return filed/Assessment Order
+      Latest Rental Agreement
+      Latest water/ Telephone/ Electricity/ Gas Connection Bill
+      Postal department's posts received/delivered in the applicant's name at given address
+      Homeless /Others
+  utter_related_doc/DOB_docs_Q2:
+  - text: |-
+      Any Govt id or Govt approved document which is validating to your age or Date of Birth can be considered as proof of age or date of birth. You can submit any proof of residence as listed below:
+
+      Aadhaar Card
+      PAN Card
+      Driving License
+      Indian Passport
+      Marksheet of Class X/Class VIII/Class V,  if it contains Date of Birth
+      Birth Certificate from the school/other educational institution (Govt./Recognized), last attended
+      Birth Certificate issued by a Municipal Authorities
+      Registrar of Births & Deaths
+      Baptism certificate
+      Other
+  utter_related_doc/age_21_more_Q3:
+  - text: Documentary proof of age is required only in those cases, where the age of the applicant is between 18 and 21 years. In all other cases, an Age declaration can be taken from the applicant as proof of age.
+  utter_related_doc/18_21_no_doc_Q4:
+  - text: In case none of the documents is available with an applicant who is of 18-21 years of age, a declaration in the prescribed format available on others category as Annexure–I, which should be made by either of the parents of the applicant (or by guru in case of an elector in transsexual (‘others’) category) can be given.
+  utter_related_doc/all_forms:
+  - text: |-
+      Please download respective forms from link given below
+      Form 6 - Application for inclusion of name in Electoral Roll
+      link : https://eci.gov.in/files/file/4843-form-6-application-for-inclusion-of-name-in-electoral-roll/
+      -
+      Form 6A - Application for inclusion of name in Electoral Roll by an overseas Indian elector.
+      link : https://eci.gov.in/files/file/4834-form-6a-application-for-inclusion-of-name-in-electoral-roll-by-an-overseas-indian-elector/
+      -
+      Form-7-Application for objecting inclusion of name in electoral roll or seeking deletion of name from Electoral Roll.
+      link : https://eci.gov.in/files/file/4830-form-7-application-for-objecting-inclusion-of-name-in-electoral-roll-or-seeking-deletion-of-name-from-electoral-roll/
+      -
+      Form 8 - Application for correction to particulars entered in Electoral Roll.
+      link : https://eci.gov.in/files/file/4826-form-8-application-for-correction-to-particulars-entered-in-electoral-roll/
+      -
+      Form-8A-Application for transposition of entry from one part of electoral roll to another part of electoral roll of a constituency.
+      link : https://eci.gov.in/files/file/4822-form-8a-application-for-transposition-of-entry-from-one-part-of-electoral-roll-to-another-part-of-electoral-roll-of-a-constituency/
+
+  utter_objection/passed_away_voters_Q4:
+  - text: |-
+      User will follow the following steps on Voter Portal to remove the name from the electoral roll due to death:
+
+      1. Register here by entering an email ID
+      2. Verify your email id by received mail.
+      3. Create a password for your account.
+      4. Select Deletion of Voter ID
+      5. Select “Other’s person name in electoral roll due to death”
+      6. Provide Voter ID number or details of the person for whom you are requesting.
+      7. Read the declaration and accept it.
+      8. Check & preview the filled information.
+      9. Get the reference number for the submitted application.
+  utter_objection/objection_form_submittion_Q5:
+  - text: Any person who is a voter in the concerned constituency may object to the inclusion of names in an electoral roll on the ground that the person whose name is included or is proposed to be included is not eligible to be registered as a voter in that constituency. Such as Family members or persons from the neighborhood etc.
+  utter_it_application/voter_portal_Q1:
+  - text: |-
+      A user can avail and access various services such as access the electoral list, apply for voter id card, apply online for corrections in voter’s card, view details of the Polling booth, Assembly Constituency and Parliamentary constituency, and get the contact details of Booth Level officer, Electoral Registration Officer among other services.
+
+      Voter Portal URL: https://voterportal.eci.gov.in
+  utter_it_application/voter_helpline_app_Q2:
+  - text: |-
+      The voter helpline mobile app is available at android & iOS platform. You can download the app by visiting Google play store & App Store URLs:
+
+              Google Play Store:
+               https://play.google.com/store/apps/details?id=com.eci.citizen&hl=en_IN
+
+              App Store:
+              https://apps.apple.com/in/app/voter-helpline/id1456535004
+  utter_it_application/pwd_app_Q3:
+  - text: |-
+      PwD mobile app is available at the android platform. You can download the app by visiting google play store URLs:
+
+           Google Play Store:
+           https://play.google.com/store/apps/details?id=pwd.eci.com.pwdapp&hl=en_IN
+  utter_it_application/cvigil_app_Q4:
+  - text: |-
+      cVIGIL mobile app is available at the android & iOS platform. You can download the app by visiting Google play store & App Store URLs:
+             Google Play Store:
+             https://play.google.com/store/apps/details?id=in.nic.eci.cvigil&hl=en_IN
+
+             App Store:
+             https://apps.apple.com/in/app/cvigil/id1455719541
+  utter_it_application/eci_website_Q5:
+  - text: A user can avail and access various public information related to the elections at https://eci.gov.in/. All information related to Press Releases, News, and launched web & mobile application details for public access.
+  utter_it_application/rti_Q6:
+  - text: Online portal facilitates applicants for seeking information under the Right to Information Act. The Portal can be accessed at https://rti.eci.nic.in/.
+  utter_it_application/not_able_login_Q7:
+  - text: |-
+      Not able to login?
+      You can log in to the web portal by using a mobile number or Email id and ‘One Time Password’.
+
+      Not getting OTP?
+      Please check your registered mobile number or email ID and check your mobile network.
+  utter_it_application/contact_us_Q8:
+  - text: You can call at Voter Helpline number 1950 .
+actions:
+- utter_correction
+- utter_default
+- utter_disqualified
+- utter_eligibility
+- utter_general
+- utter_it_application
+- utter_nri
+- utter_objection
+- utter_outofscope
+- utter_register
+- utter_related_doc
+- utter_choice1
+- utter_choice2
+- utter_choice3
+- utter_choice4
+- utter_choice5
+- utter_choice6
+- utter_choice7
+- utter_choice8
+- action_save_data

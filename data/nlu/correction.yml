@@ -1,0 +1,57 @@
+version: "2.0"
+
+nlu:
+- intent: correction/entry_correction_number_Q1
+  examples: |
+    - How many entries can be corrected in a single form?
+    - number of correction
+    - i want to correct my entries
+    - i want to change my entry
+    - form for correction of entries
+    - correction of entries
+    - correction
+
+- intent: correction/correct_details_voterid_Q2
+  examples: |
+    - How to correct my details on the voter card?
+    - i want correct my details on the voter card?
+    - correct my details on the voter card
+    - correction in voter id
+
+- intent: correction/change_DOB_Q3
+  examples: |
+    - How to change Date Of Birth?
+    - i want to change my date of birth
+    - i want to change my dob
+    - change my date of birth
+    - correction in age
+
+- intent: correction/change_name_Q4
+  examples: |
+    - How to correct my name?
+    - i want to change my name on voter card
+    - i want to change my name
+    - change my name on voter card
+    - correction in name
+
+- intent: correction/change_relative_name_Q5
+  examples: |
+    - How to change the relative name?
+    - How to correct my relative name?
+    - i want to change my relative name on voter card
+    - i want to change relative name
+    - i want to change name of relative
+    - correction in relative name
+    - correction in name of relative
+
+- intent: correction/change_pin_Q6
+  examples: |
+    - All the details are correct in my voter ID except pin code and area name in the revised list? What do I do?
+    - How to correct my pin code?
+    - How to correct my area code?
+    - How to correct my area name?
+    - i want to change my pin code on voter card
+    - i want to change pin code
+    - change pin code on voter card
+    - correction in address
+    - change address on voter card
