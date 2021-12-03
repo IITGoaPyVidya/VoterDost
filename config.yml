@@ -45,11 +45,6 @@ pipeline:
     epochs: 70
   - name: FallbackClassifier
     threshold: 0.8
-  - name: DucklingHTTPExtractor
-    url: http://localhost:8000/
-    dimensions:
-      - number
-      - email
 
 #pipeline:
 
