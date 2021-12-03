@@ -16,9 +16,9 @@ services:
     volumes:
     - ./actions:/app/actions
     - ./data:/app/data
-    command: bash -c "rm -rf models/* &&  rasa run --enable-api --cors \"*\" --debug"
+    command: bash -c "rm -rf models/* &&  rasa run --enable-api --cors \"*\" --debug -p 5006"
     ports:
-    - '5006:5005'
+    - '5006:5006'
     public: true
     networks:
     - all
