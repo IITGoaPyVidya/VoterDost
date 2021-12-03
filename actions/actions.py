@@ -6,7 +6,7 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
-
+"""
 from typing import Any, Text, Dict, List, Union
 
 from rasa_sdk import Action, Tracker
@@ -27,7 +27,7 @@ from rasa_sdk.executor import CollectingDispatcher
 #
 #         return []
 from rasa_sdk.forms import FormAction
-from excel_data_store_read import DataStore
+#from excel_data_store_read import DataStore
 
 class ActionSaveData(Action):
     def name(self) -> Text:
@@ -72,3 +72,4 @@ class FormDataCollect(FormAction):
 
         ))
         return []
+"""
